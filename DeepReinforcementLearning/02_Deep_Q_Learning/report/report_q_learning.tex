@@ -1,0 +1,36 @@
+\documentclass[a4paper, 9pt]{extarticle}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+
+\title{Project 2 - Deep_Q_Learning}
+\author{Meier Michael}
+\date{02. 04. 2025}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+The goal of this project was to implement a RL agent that learns to find a key in a 7x7 grid and is able to open a door with it.
+For the training of the agent, the Q-Learning approach was used. In this approach, the agent learns by rewards 
+that it recieves for its actions. In this case, the agent followed a \epsilon-greedy policy. 
+
+
+\section*{Methods}
+For the implementation of the Q-Learning aglorithm, the provided Notebook was used as a base. The task was to fill the 
+todos in it. 
+The agent was trained over 1000 episodes. During these, at first transitions were collected and stored in the replay buffer. 
+If the buffer is lagre enough, the angent starts to sample from it and calculates the q-values for the states and also the targets for the training.
+For the loss a mean squared error was used. The minibatches form where the samples were taken from had a batchsize of 256.
+After the calculation of the loss, the target network was updated with the weights of the source network.
+
+
+\section*{Results}
+
+
+
+\section*{Conclusion}
+
+
+
+\end{document}
